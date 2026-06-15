@@ -88,11 +88,11 @@ h1, h2 {
 }
 
 .user-msg {
-  color: #9acd32; /* yellow-green for user text */
+  color: #FF69B4; /* yellow-green for user text */
 }
 
 .alpaca-msg {
-  color: #d4af37; /* gold for ALPACA replies */
+  color: #FFFFF0; /* gold for ALPACA replies */
   font-style: italic;
 }
 
@@ -104,10 +104,10 @@ h1, h2 {
 #userInput {
   flex: 1;
   padding: 10px;
-  border: 2px solid #1a1a1a;
+  border: 2px solid #800000;
   border-radius: 6px;
-  background-color: #3a4a3f;
-  color: #f4f4f4;
+  background-color: #FF00FF;
+  color: #32CD32;
 }
 
 #userInput::placeholder {
@@ -124,17 +124,17 @@ h1, h2 {
 button {
   padding: 10px 20px;
   margin-left: 10px;
-  background-color: #d4af37;
+  background-color: #BA55D3;
   border: none;
   border-radius: 6px;
-  color: #1a1a1a;
+  color: #9370DB;
   font-weight: bold;
   cursor: pointer;
   transition: background 0.3s;
 }
 
 button:hover {
-  background-color: #b8860b;
+  background-color: #663399;
 }
 
 #messages {
