@@ -1,11 +1,11 @@
-alpacaspurplepassion.vercel.app// front.js
+Ialpacaspurplepassion.vercel.app// front.js
 alert("front.js loaded");
 const form = document.getElementById("chatForm");
 const messagesDiv = document.getElementById("messages");
 const input = document.getElementById("userInput");
 
 // Change this to your deployed Vercel URL
-const API_URL = "https://alpacaspurplepassion-bu1l2pj6f-davi-combs-projects.vercel.app/api/chat";
+const API_URL = "alpacaspurplepassion.vercel.app/api/chat";
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
   const userMsg = input.value.trim();
