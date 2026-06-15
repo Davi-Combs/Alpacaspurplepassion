@@ -37,6 +37,14 @@
   /*resize: both;*/
   overflow: auto;
 }
+.container {
+  position: relative;   /* we’ll scatter them later */
+  padding: 10px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.8); /* light floating bubble */
+  box-shadow: 0px 3px 6px rgba(0,0,0,0.1);
+    
+}
     .glow-title {
       font-size: 2.7em;
       text-align: center;
