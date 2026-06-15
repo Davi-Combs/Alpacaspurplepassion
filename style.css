@@ -3,8 +3,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Courier New", monospace;
-  background-color: #000000; /* dark grey background like fatigues */
-  color: #2e2e2e;
+  background-color: #8A2BE2; /* dark grey background like fatigues */
+  color: #7FFF00;
 }
 
 .page-container {
@@ -21,8 +21,8 @@ body {
   display: grid;
     grid-template-columns: repeat(2, 1fr); /* Adjust the number of columns */
     gap: 10px; /* Adjust the gap between items */
-  background-color: #0000FF; /* deep army green */
-  border: 4px solid #8A2BE2;
+  background-color: #00008B; /* deep army green */
+  border: 4px solid #6495ED;
   border-radius: 12px;
   padding: 20px;
   width: 98%;
@@ -40,19 +40,19 @@ body {
   position: relative;   /* we’ll scatter them later */
   padding: 10px;
   border-radius: 12px;
-  background: rgba(255,255,255,0.8); /* light floating bubble */
+  background: rgba(245,40,145,0.8); /* light floating bubble */
   box-shadow: 0px 3px 6px rgba(0,0,0,0.1);
 }
 
 h1, h2 {
-  color: #000000; /* gold for contrast */
+  color: #FF1493; /* gold for contrast */
   text-align: center;
   letter-spacing: 2px;
 }
 
 .chatbox {
-  background-color: #9400D3;
-  border: 2px solid #FF1493;
+  background-color: #00FF00;
+  border: 2px solid #FF00FF;
   border-radius: 6px;
   padding: 10px;
   min-height: 100px;
@@ -60,7 +60,7 @@ h1, h2 {
   display: flex;
   flex-direction: column; /* stack messages + form vertically */
   font-size: 14px;
-  color: #228B22;
+  color: #000000;
 
   /* resizable */
   resize: both;
@@ -88,11 +88,11 @@ h1, h2 {
 }
 
 .user-msg {
-  color: #FF69B4; /* yellow-green for user text */
+  color: #9acd32; /* yellow-green for user text */
 }
 
 .alpaca-msg {
-  color: #FFFFF0; /* gold for ALPACA replies */
+  color: #d4af37; /* gold for ALPACA replies */
   font-style: italic;
 }
 
@@ -104,10 +104,10 @@ h1, h2 {
 #userInput {
   flex: 1;
   padding: 10px;
-  border: 2px solid #800000;
+  border: 2px solid #1a1a1a;
   border-radius: 6px;
-  background-color: #FF00FF;
-  color: #32CD32;
+  background-color: #3a4a3f;
+  color: #f4f4f4;
 }
 
 #userInput::placeholder {
@@ -124,17 +124,17 @@ h1, h2 {
 button {
   padding: 10px 20px;
   margin-left: 10px;
-  background-color: #BA55D3;
+  background-color: #d4af37;
   border: none;
   border-radius: 6px;
-  color: #9370DB;
+  color: #1a1a1a;
   font-weight: bold;
   cursor: pointer;
   transition: background 0.3s;
 }
 
 button:hover {
-  background-color: #663399;
+  background-color: #b8860b;
 }
 
 #messages {
