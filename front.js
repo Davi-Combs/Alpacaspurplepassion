@@ -1,4 +1,4 @@
-// front.js
+alpacaspurplepassion.vercel.app// front.js
 alert("front.js loaded");
 const form = document.getElementById("chatForm");
 const messagesDiv = document.getElementById("messages");
