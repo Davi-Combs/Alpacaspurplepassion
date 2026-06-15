@@ -5,7 +5,7 @@ const messagesDiv = document.getElementById("messages");
 const input = document.getElementById("userInput");
 
 // Change this to your deployed Vercel URL
-const API_URL = "https://alpacaspurplepassion.vercel.app/api/chat";
+const API_URL = "https://davian.vercel.app/api/chat";
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
   const userMsg = input.value.trim();
@@ -21,7 +21,7 @@ form.addEventListener("submit", async (e) => {
       body: JSON.stringify({ message: userMsg }),
     });
     const data = await res.json();
-    appendMessage("ALPACA", JSON.stringify(data));
+    appendMessage("ALPACA", data.reply || "No reply");
   } catch (err) {
     console.error("Fetch error:", err);
     appendMessage("Error", "Unable to reach server");
@@ -36,4 +36,4 @@ window.addEventListener("beforeunload", (e) => {
   msg.innerHTML = `<strong>${sender}:</strong> ${text}`;
   messagesDiv.appendChild(msg);
   messagesDiv.scrollTop = messagesDiv.scrollHeight;
-  }
+  } 
