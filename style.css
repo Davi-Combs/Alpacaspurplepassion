@@ -1,13 +1,12 @@
-⁸    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
-    body {
-      background: #090922;
-      color: #fff;
-      font-family: 'Orbitron', monospace;
-      margin: 0;
-      overflow-x: hidden;
-      min-height: 100vh;
-    }
-   
+/*pure as snow*/
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Courier New", monospace;
+  background-color: #000000; /* dark grey background like fatigues */
+  color: #2e2e2e;
+}
+
 .page-container {
   position: relative;
   width: 100%;
@@ -17,9 +16,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
-
 .grid-container {
   display: grid;
     grid-template-columns: repeat(2, 1fr); /* Adjust the number of columns */
@@ -37,13 +34,20 @@
   /*resize: both;*/
   overflow: auto;
 }
+
+
 .container {
   position: relative;   /* we’ll scatter them later */
   padding: 10px;
   border-radius: 12px;
   background: rgba(255,255,255,0.8); /* light floating bubble */
   box-shadow: 0px 3px 6px rgba(0,0,0,0.1);
-    
+}
+
+h1, h2 {
+  color: #d4af37; /* gold for contrast */
+  text-align: center;
+  letter-spacing: 2px;
 }
 
 .chatbox {
@@ -73,156 +77,75 @@
   margin-bottom: 10px;
 }
 
-    .glow-title {
-      font-size: 2.7em;
-      text-align: center;
-      margin-top: 28px;
-      margin-bottom: 10px;
-      letter-spacing: 3px;
-      text-shadow: 
-        0 0 7px #0ff, 
-        0 0 12px #0ff, 
-        0 0 24px #f0f, 
-        0 0 36px #0ff;
-      color: #0ff;
-      filter: blur(.1px);
-    }
+#chatForm {
+  display: flex;
+  margin-top: 10px;
+  flex-shrink: 0; /* keep form pinned at bottom */
+}
 
-    .subtitle {
-      text-align: center;
-      color: #ff48c8;
-      font-size: 1.18em;
-      letter-spacing: 2px;
-      margin-bottom: 18px;
-      text-shadow: 0 0 8px #ff48c8, 0 0 18px #ff0;
-    }
+#messages div {
+  margin-bottom: 10px;
+}
 
-    .box {
-      border: 4px solid #00ffea;
-      border-radius: 16px;
-      padding: 28px;
-      margin: 35px auto 0;
-      max-width: 430px;
-      background: rgba(30,0,60,0.82);
-      box-shadow: 0 0 16px 6px #0ff, 0 0 25px 7px #ff48c8 inset;
-    }
+.user-msg {
+  color: #9acd32; /* yellow-green for user text */
+}
 
-    .alpaca-img {
-      display: block;
-      margin: 15px auto 12px auto;
-      width: 90px;
-      filter: drop-shadow(0 0 14px #fff) hue-rotate(240deg);
-      transition: filter 0.22s;
-      border-radius: 20px;
-      border: 3px solid #7fffd4;
-    }
+.alpaca-msg {
+  color: #d4af37; /* gold for ALPACA replies */
+  font-style: italic;
+}
 
-    .alpaca-img:hover {
-      filter: drop-shadow(0 0 24px #f0f) brightness(1.12);
-      border: 3px solid #f0f;
-    }
+#chatForm {
+  display: flex;
+  margin-top: 10px;
+}
 
-    .chat-label {
-      color: #00ffae;
-      font-size: 1.3em;
-      text-align: center;
-      margin-bottom: 12px;
-      text-shadow: 0 0 5px #0ff, 0 0 7px #ff0;
-      letter-spacing: 2px;
-    }
+#userInput {
+  flex: 1;
+  padding: 10px;
+  border: 2px solid #1a1a1a;
+  border-radius: 6px;
+  background-color: #3a4a3f;
+  color: #f4f4f4;
+}
 
-    #chat {
-      height: 145px;
-      overflow-y: auto;
-      background: rgba(18,0,35,0.76);
-      border-radius: 10px;
-      border: 2px solid #f0f;
-      color: #fff;
-      font-family: monospace;
-      padding: 12px;
-      margin-bottom: 16px;
-      font-size: 1.02em;
-      box-shadow: 0 0 11px #f0f inset;
-    }
+#userInput::placeholder {
+  color: #bbb;
+}
+#messages {
+  flex: 1;
+  overflow-y: auto;   /* vertical scrollbar */
+  overflow-x: hidden; /* no sideways scrolling */
+  padding-right: 5px;
+  max-height: 400px;  /* adjust as needed */
+}
 
-    .input-row {
-      display: flex;
-      gap: 8px;
-      margin-top: 6px;
-      justify-content: center;
-    }
+button {
+  padding: 10px 20px;
+  margin-left: 10px;
+  background-color: #d4af37;
+  border: none;
+  border-radius: 6px;
+  color: #1a1a1a;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
 
-    #alpacaInput {
-      width: 75%;
-      padding: 8px;
-      font-family: inherit;
-      font-size: 1em;
-      border-radius: 7px;
-      border: 2px solid #0ff;
-      background: #181e36;
-      color: #fff;
-      box-shadow: 0 0 6px #0ff inset;
-      outline: none;
-      transition: border 0.2s;
-    }
+button:hover {
+  background-color: #b8860b;
+}
 
-    #alpacaInput:focus {
-      border: 2px solid #ff48c8;
-    }
+#messages {
+  min-height: 150px !important;
+  border: 3px solid red !important;
+}
 
-    .send-btn {
-      background: linear-gradient(90deg,#f0f 15%, #00ffea 85%);
-      color: #222;
-      font-weight: bold;
-      padding: 8px 21px;
-      border-radius: 7px;
-      font-family: inherit;
-      font-size: 1em;
-      border: none;
-      cursor: pointer;
-      text-shadow: 0 0 4px #fff;
-      box-shadow: 0 0 6px #f0f;
-      transition: background 0.15s;
-    }
-
-    .send-btn:hover {
-      background: linear-gradient(90deg,#ff0 15%, #f0f 85%);
-      color: #222;
-      box-shadow: 0 0 10px #ff0;
-    }
-
-    .footer {
-      position: fixed;
-      width: 100vw;
-      bottom: 0;
-      background: #0e0022;
-      color: #0ff;
-      text-align: center;
-      padding: 10px 0;
-      border-top: 2px solid #ff48c8;
-      font-size: 1em;
-      font-family: 'Orbitron', monospace;
-      letter-spacing: 2px;
-      text-shadow: 0 0 4px #f0f, 0 0 9px #00ffea;
-    }
-    /* Neon box glow for mistakes section */
-    .mistake {
-      border: 3px dashed #ff0;
-      border-radius: 15px;
-      background: rgba(50,0,80,0.8);
-      color: #ff0;
-      box-shadow: 0 0 13px #ff0, 0 0 9px #f0f inset;
-      padding: 18px;
-      margin: 16px auto 0;
-      max-width: 370px;
-      font-size: 1.1em;
-      font-family: inherit;
-      text-align: center;
-      text-shadow: 0 0 6px #fff;
-    }
-
-    .mistake strong {
-      color: #f0f;
-      letter-spacing: 2px;
-    }
-  
+#chatForm {
+  display: flex !important;
+  border: 3px solid lime !important;
+}
+html, body {
+  overscroll-behavior-y: none;
+}
