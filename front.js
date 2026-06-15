@@ -3,7 +3,21 @@ alert("front.js loaded");
 const form = document.getElementById("chatForm");
 const messagesDiv = document.getElementById("messages");
 const input = document.getElementById("userInput");
+try {
+  const res = await fetch(API_URL, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ message: userMsg }),
+  });
 
+  alert("STATUS: " + res.status);
+
+  const data = await res.json();
+  alert(JSON.stringify(data));
+
+} catch (err) {
+  alert("FETCH ERROR: " + err);
+}
 // Change this to your deployed Vercel URL
 const API_URL = "alpacaspurplepassion.vercel.app/api/chat";
 form.addEventListener("submit", async (e) => {
