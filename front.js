@@ -21,7 +21,7 @@ form.addEventListener("submit", async (e) => {
       body: JSON.stringify({ message: userMsg }),
     });
     const data = await res.json();
-    appendMessage("ALPACA", data.reply || "No reply");
+    appendMessage("ALPACA", JSON.stringify(data));
   } catch (err) {
     console.error("Fetch error:", err);
     appendMessage("Error", "Unable to reach server");
