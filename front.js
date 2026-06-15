@@ -23,6 +23,7 @@ form.addEventListener("submit", async (e) => {
     
     alert("STATUS: " + res.status);
     const data = await res.json();
+    alert(JSON.stringify(data));
     appendMessage("ALPACA", data.reply || "No reply");
   } catch (err) {
     console.error("Fetch error:", err);
